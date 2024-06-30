@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded', function() {
     } else if (username == "") {
       masukkan_pesan("Hoho kamu siapa...?")
     } else {
-      fetch('Data/Data/user&pass.json')
+      fetch('Data/Data/user_pass.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok')
