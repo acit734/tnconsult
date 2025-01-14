@@ -1,0 +1,25 @@
+{
+  "name": "bkonline",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "chokidar": "^3.6.0",
+    "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
+    "mongoose": "^8.7.3",
+    "msgpack5": "^6.0.2",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.8.1",
+    "sqlite3": "^5.1.7",
+    "uuid": "^10.0.0"
+  }
+}
