@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head lang="id">
+        <title>BKOnline</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="Data/Gambar/logo.png">
+    </head>
+    <body>
+        <header style="width: 96%;">
+            <div id="gambar-logo-bkonline"></div>
+            <div id="nama-user">
+                <img src="Data/Gambar/LOGO SMA TARUNA NUSANTARA 1 (1).png" id="logo-tn">
+                <div id="nama-dan-dropdown">
+                    <div id="tombol-dropdown">
+                        <p id="teks-nama-user"></p>
+                        <div id="logo-chevron">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" style="fill: rgb(255, 255, 255);" transform="matrix(1, 0, 0, 1, 0, 7.105427357601002e-15)"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div id="tombol-logout" style="top: -100%;">
+                        <p>Logout</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="sidebar" style="width: 4%;">
+            <div id="logo-bkonline-sidebar" style="top: -50%;"></div>
+            <div id="menu-nav">
+                <div class="pair" title="Halaman Utama">
+                    <div class="pilihan" id="pil-1">
+                        <div class="icon">
+                            <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" style="fill: rgb(255, 255, 255);"/>
+                            </svg>
+                        </div>
+                        <p class="teks-nav" id="nav-halamana-utama">Halaman Utama</p>
+                    </div>
+                    <div class="hiasan-sidebar"></div>
+                </div>
+                <div class="pair" title="Chat dengan Pamong BK" id="pilihan2-sidebar">
+                    <div class="pilihan" id="pil-2">
+                        <div class="icon">
+                            <svg viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5H192 32c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32H68.8l44.9-36c22.7-18.2 50.9-28 80-28H272h16 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H288 272c-8.8 0-16 7.2-16 16s7.2 16 16 16H392.6l119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384l0 0-.9 0c.3 0 .6 0 .9 0z" style="fill: rgb(255, 255, 255);" transform="matrix(1, 0, 0, 1, -2.842170943040401e-14, 0)"/>
+                            </svg>
+                        </div>
+                        <p class="teks-nav" id="nav-chat-dengan-pamong-bk">Chat dengan Pamong BK</p>
+                    </div>
+                    <div class="hiasan-sidebar"></div>
+                </div>
+                <div class="pair" title="Forum">
+                    <div class="pilihan" id="pil-3">
+                        <div class="icon">
+                            <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2 0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.3-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9l0 0 0 0-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z" style="fill: rgb(255, 255, 255);" transform="matrix(1, 0, 0, 1, 0, -7.105427357601002e-15)"/>
+                            </svg>
+                        </div>
+                        <p class="teks-nav" id="nav-forum">Forum</p>
+                    </div>
+                    <div class="hiasan-sidebar"></div>
+                </div>
+                <div class="pair" title="Artikel Studi Lanjut" id="pilihan4-sidebar">
+                    <div class="pilihan" id="pil-4">
+                        <div class="icon">
+                            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M96 96c0-35.3 28.7-64 64-64H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H80c-44.2 0-80-35.8-80-80V128c0-17.7 14.3-32 32-32s32 14.3 32 32V400c0 8.8 7.2 16 16 16s16-7.2 16-16V96zm64 24v80c0 13.3 10.7 24 24 24H296c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24H184c-13.3 0-24 10.7-24 24zm208-8c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H384c-8.8 0-16 7.2-16 16zM160 304c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16zm0 96c0 8.8 7.2 16 16 16H432c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" style="fill: rgb(255, 255, 255);" transform="matrix(1, 0, 0, 1, 0, -7.105427357601002e-15)"/>
+                            </svg>
+                        </div>
+                        <p class="teks-nav" id="nav-artikel-studi-lanjut">Artikel Studi Lanjut</p>
+                    </div>
+                    <div class="hiasan-sidebar"></div>
+                </div>
+            </div>
+        </div>
+        <div id="nav-button" title="Navigasi" style="margin-left: 8px;">
+            <div class="navbar" id="navbar-1" style="transform: rotate(0deg); top: 0px; left: 0px;"></div>
+            <div class="navbar" id="navbar-2" style="opacity: 1;"></div>
+            <div class="navbar" id="navbar-3" style="transform: rotate(0deg); bottom: 0px; left: 0px;"></div>
+        </div>
+        <div class="contents" >
+            <div class="content-1">
+                <div id="gambar-bg"></div>
+                <div id="teks-group">
+                    <h2 id="display-nama-di-greet"></h2>
+                    <h1 id="halo-waktu">Selamat </h1>
+                </div>
+            </div>
+            <div class="content-2">
+                <h1 id="selamat-datang">Selamat Datang di</h1>
+                <img src="Data/Gambar/BKOnline_ba-style@nulla.top.png" alt="logo BKOnline" id="logo-bkonline-content2">
+                <div class="pilihan2-content2">
+                    <div class="pilihan-content2" id="pilihan1-content2">
+                        <div class="atas-content2">
+                            <div id="latar-gambar1-content2" class="gambar-content2"></div>
+                            <div class="icon-container-content2">
+                                <div class="icon-content2" id="icon1-content2"></div>
+                            </div>
+                        </div>
+                        <div class="bawah-content2">
+                            <h3>Chat dengan Pamong BK</h3>
+                            <p class="p-content2">Dapatkan arahan yang memberikan kamu jalan yang benar.</p>
+                        </div>
+                    </div>
+                    <div class="pilihan-content2" id="pilihan2-content2">
+                        <div class="atas-content2">
+                            <div id="latar-gambar2-content2" class="gambar-content2"></div>
+                            <div class="icon-container-content2">
+                                <div class="icon-content2" id="icon2-content2"></div>
+                            </div>
+                        </div>
+                        <div class="bawah-content2">
+                            <h3>Forum</h3>
+                            <p class="p-content2">Mari ikut berdiskusi dengan siswa lain untuk saling berbagi pengetahuan.</p></div>
+                    </div>
+                    <div class="pilihan-content2" id="pilihan3-content2">
+                        <div class="atas-content2">
+                            <div id="latar-gambar3-content2" class="gambar-content2"></div>
+                            <div class="icon-container-content2">
+                                <div class="icon-content2" id="icon3-content2"></div>
+                            </div>
+                        </div>
+                        <div class="bawah-content2">
+                            <h3>Artikel Studi Lanjut</h3>
+                            <p class="p-content2">Dapatkan berita terkini mengenai studi lanjut di luar sana.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-3">
+                <h1 id="artikel-content3">Artikel Terbaru</h1>
+            </div>
+            <footer>
+                <address>
+                    Dibuat oleh:<br>
+                    Tim TN IT<br>
+                    SMA Taruna Nusantara<br>
+                </address>
+            </footer>
+        </div>
+    </body>
+</html>

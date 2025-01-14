@@ -1,0 +1,12 @@
+{
+    "data" : [
+        { "judul" : "" },
+        { "sampul" : ""}
+    ],
+    "config" : {
+        "created" : "",
+        "publicDate" : "",
+        "type" : "",
+        "tag" : {}
+    }
+}

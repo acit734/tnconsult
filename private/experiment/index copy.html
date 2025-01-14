@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Div</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .resizable {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #2980b9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .resizable::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background: #2980b9;
+            cursor: nwse-resize;
+        }
+
+        .resizable .side {
+            position: absolute;
+            background: #2980b9;
+        }
+
+        .resizable .side.right {
+            right: -5px;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            cursor: ew-resize;
+        }
+
+        .resizable .side.bottom {
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 10px;
+            cursor: ns-resize;
+        }
+    </style>
+</head>
+<body>
+    <div class="resizable" id="resizable">
+        <div class="side right"></div>
+        <div class="side bottom"></div>
+        Resize Me!
+    </div>
+
+    <script>
+        const resizable = document.getElementById('resizable');
+        let isResizing = false;
+        let currentResizer;
+
+        const resizers = document.querySelectorAll('.side, .resizable::after');
+
+        resizers.forEach(resizer => {
+            resizer.addEventListener('mousedown', (e) => {
+                isResizing = true;
+                currentResizer = resizer;
+                document.addEventListener('mousemove', resize);
+                document.addEventListener('mouseup', stopResize);
+            });
+        });
+
+        function resize(e) {
+            if (!isResizing) return;
+
+            const rect = resizable.getBoundingClientRect();
+
+            if (currentResizer.classList.contains('right')) {
+                resizable.style.width = e.clientX - rect.left + 'px';
+            } else if (currentResizer.classList.contains('bottom')) {
+                resizable.style.height = e.clientY - rect.top + 'px';
+            } else if (currentResizer === resizable.querySelector('::after')) {
+                const newWidth = e.clientX - rect.left;
+                const newHeight = newWidth; // Maintain aspect ratio
+                resizable.style.width = newWidth + 'px';
+                resizable.style.height = newHeight + 'px';
+            }
+        }
+
+        function stopResize() {
+            isResizing = false;
+            currentResizer = null;
+            document.removeEventListener('mousemove', resize);
+            document.removeEventListener('mouseup', stopResize);
+        }
+    </script>
+</body>
+</html>

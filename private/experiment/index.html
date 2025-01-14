@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resizableDiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+  border: 1px solid #000;
+  resize: both; /* Memungkinkan untuk meresize dari sisi dan sudut */
+  overflow: auto; /* Untuk menangani overflow saat resize */
+}
+    </style>
+    <script>
+    const resizableDiv = document.getElementById('resizableDiv');
+        let originalWidth = resizableDiv.offsetWidth;
+        let originalHeight = resizableDiv.offsetHeight;
+        let aspectRatio = originalWidth / originalHeight;
+        
+        function resizeElement(event) {
+          const newWidth = event.clientX - resizableDiv.getBoundingClientRect().left;
+          const newHeight = newWidth / aspectRatio;
+        
+          resizableDiv.style.width = `${newWidth}px`;
+          resizableDiv.style.height = `${newHeight}px`;
+        }
+        
+        resizableDiv.addEventListener('mousemove', function(event) {
+          if (event.buttons === 1) {
+            resizeElement(event);
+          }
+        });
+        
+        document.addEventListener('mouseup', function() {
+          originalWidth = resizableDiv.offsetWidth;
+          originalHeight = resizableDiv.offsetHeight;
+          aspectRatio = originalWidth / originalHeight;
+        });
+        </script>
+</head>
+<body>
+    <div id="resizableDiv"></div>
+
+</body>
+</html>
